@@ -21,10 +21,10 @@ body {
 
 .container {
     display: flex;
-    /* align-items: center; */
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
-    max-width: 16rem;
+    max-width: 18rem;
     border: 2px solid black;
     padding: 2rem;
 }
@@ -32,9 +32,13 @@ body {
 .header {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    text-align: center;
+    justify-content: space-between;
+    gap: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.header-heading {
+    font-size: clamp(1rem, 2vw, 1rem);
 }
 
 .back-btn,
@@ -43,12 +47,46 @@ body {
     border: none;
     border-radius: 1rem;
     box-shadow: 0.05rem 0.05rem 0.7rem rgba(141, 141, 141, 0.125), -0.05rem -0.05rem 0.7rem rgba(141, 141, 141, 0.125);
-    width: 3rem;
-    height: 3rem;
+    width: 2.7rem;
+    height: 2.7rem;
     padding: 0.1rem;
 }
 
 .back-btn img,
 .three-dots-btn img {
     width: 1.5rem;
+}
+
+.drug-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: left;
+    text-align: left;
+    width: 100%;
+}
+
+.drug-illustration {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.drug-illustration img {
+    width: 10rem;
+    margin-bottom: 2rem;
+}
+
+.text {
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+}
+
+.drug-info-heading {
+    text-align: left;
+    align-self: flex-start;
 }
