@@ -1,13 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
-    --gray-blue: rgb(163, 165, 174);
+    --gray-blue: rgba(104, 105, 106, 0.882);
     --light-gray: rgb(250, 250, 250);
 }
 
 * {
     margin: 0;
     padding: 0;
+}
+
+p {
+    color: var(--gray-blue);
 }
 
 body {
@@ -25,7 +29,7 @@ body {
     align-items: center;
     width: 100%;
     max-width: 20rem;
-    border: 2px solid black;
+    /* border: 2px solid black; for debugging lol */
     padding: 1.7rem;
 }
 
@@ -84,15 +88,14 @@ body {
 }
 
 .drug-info-text {
-    font-size: 0.57rem;
+    font-size: clamp(0.7rem, 2vw, 0.9rem);
 }
 
 .drug-info-cards {
-    display: grid;
-    grid-template-rows: 5rem 5rem;
-    grid-template-columns: 8rem 8rem;
+    display: flex;
     align-items: center;
     justify-content: center;
+    gap: 1.7rem;
 }
 
 .info-amount img,
@@ -100,4 +103,53 @@ body {
 .info-cause img,
 .info-cap-size img {
     width: 1.5rem;
+}
+
+.info-amount,
+.info-month,
+.info-cause,
+.info-cap-size {
+    background-color: white;
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0.05rem 0.05rem 0.7rem rgba(141, 141, 141, 0.125), -0.05rem -0.05rem 0.7rem rgba(141, 141, 141, 0.125);
+    width: 9rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    gap: 0.65rem;
+}
+
+.info-amount p,
+.info-month p,
+.info-cause p,
+.info-cap-size p {
+    font-size: 0.8rem;
+}
+
+.info-amount h4,
+.info-month h4,
+.info-cause h4,
+.info-cap-size h4 {
+    margin-bottom: 0.2rem;
+}
+
+.edit-schedule {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.edit-schedule button {
+    width: 100%;
+    height: 3rem;
+    font-size: 1rem;
+    color: white;
+    background: linear-gradient(rgb(209, 183, 170), rgb(202, 162, 137));
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0.05rem 0.05rem 0.7rem rgba(141, 141, 141, 0.23), -0.05rem -0.05rem 0.7rem rgba(141, 141, 141, 0.23);
+    margin-top: 1.5rem;
 }
