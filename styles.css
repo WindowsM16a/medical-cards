@@ -86,3 +86,18 @@ body {
 .drug-info-text {
     font-size: 0.57rem;
 }
+
+.drug-info-cards {
+    display: grid;
+    grid-template-rows: 5rem 5rem;
+    grid-template-columns: 8rem 8rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-amount img,
+.info-month img,
+.info-cause img,
+.info-cap-size img {
+    width: 1.5rem;
+}
